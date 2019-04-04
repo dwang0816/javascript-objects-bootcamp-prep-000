@@ -1,21 +1,14 @@
-var recipes = {};
-
-function updateObjectWithKeyAndValue (object, key, value) {
-  return Object.assign({}, object, {[key]: value});
+const playlist = {
+  artistName: "Adele",
+  songTitle: "Hello"
 }
 
-function destructivelyUpdateObjectWithKeyAndValue (object, key, value) {
-  object[key] = value;
-  return object;
+function updatePlaylist(playlist, artistName, songTitle) {
+  playlist[artistName] = songTitle
+  return playlist
 }
 
-function deleteFromObjectByKey (object, key, value) {
-  var newObj = Object.assign({}, object);
-  delete newObj[key];
-  return newObj;
-}
-
-function destructivelyDeleteFromObjectByKey (object, key, value) {
-  delete object[key];
-  return object;
+function removeFromPlaylist(playlist, artistName) {
+  delete playlist[artistName]
+  return playlist
 }
